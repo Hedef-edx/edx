@@ -1,6 +1,7 @@
 """
 Test for the NotificationFilter class.
 """
+import unittest
 from datetime import timedelta
 from unittest import mock
 
@@ -11,6 +12,8 @@ from common.djangoapps.course_modes.models import CourseMode
 from common.djangoapps.student.models import CourseEnrollment
 from common.djangoapps.student.tests.factories import UserFactory
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
+from openedx.core.djangoapps.django_comment_common.models import Role
+from openedx.core.djangoapps.notifications.config.audience_filters import EnrollmentAudienceFilter, RoleAudienceFilter
 from openedx.core.djangoapps.notifications.filters import NotificationFilter
 from openedx.features.course_duration_limits.models import CourseDurationLimitConfig
 from openedx.features.course_experience.tests.views.helpers import add_course_mode

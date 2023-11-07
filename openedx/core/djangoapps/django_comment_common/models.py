@@ -126,6 +126,13 @@ class Role(models.Model):
         """
         return Role.objects.filter(course_id=course_id, name__in=role_names, users=user).exists()
 
+    @staticmethod
+    def course_users_with_role(course_id, roles):
+        """
+        Returns a queryset of users with the given role for the given course
+        """
+        return User.objects.filter(roles__course_id=course_id, roles__name=roles)
+
 
 class Permission(models.Model):
     """
