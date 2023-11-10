@@ -2039,9 +2039,6 @@ tox==3.28.0
     # via
     #   -c requirements/edx/../common_constraints.txt
     #   -r requirements/edx/testing.txt
-    #   tox-battery
-tox-battery==0.6.2
-    # via -r requirements/edx/testing.txt
 tqdm==4.66.1
     # via
     #   -r requirements/edx/doc.txt
