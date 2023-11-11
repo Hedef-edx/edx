@@ -22,7 +22,7 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Fetch 2u/project-theseus to compare coverage
       run: git fetch --depth=1 origin 2u/project-theseus
 
