@@ -27,7 +27,7 @@ jobs:
       run: git fetch --depth=1 origin 2u/project-theseus
 
     - name: Setup Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
 
