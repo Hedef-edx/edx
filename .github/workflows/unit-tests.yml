@@ -73,7 +73,7 @@ jobs:
           mv reports/.coverage reports/${{ matrix.shard_name }}.coverage
 
       - name: Upload coverage
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage
           path: reports/${{matrix.shard_name}}.coverage
@@ -116,7 +116,7 @@ jobs:
 
       - name: save warning report
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pytest-warning-report-html
           path: |
